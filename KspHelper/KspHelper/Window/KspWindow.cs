@@ -81,5 +81,13 @@ namespace KspHelper.Window
             if (IsDragEnabled)
                 GUI.DragWindow();
         }
+
+        public void CenterScreen()
+        {
+            var x = (Screen.width - WindowRect.width) / 2;
+            var y = (Screen.height - WindowRect.height) / 2;
+
+            WindowRect = new Rect(x, y, WindowRect.width, WindowRect.height);
+        }
     }
 }

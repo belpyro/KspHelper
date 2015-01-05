@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavior\BehaviorSingleton.cs" />
     <Compile Include="Behavior\KspBehavior.cs" />
     <Compile Include="Events\EventsHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
