@@ -53,6 +53,7 @@
     <Compile Include="Behavior\KspBehavior.cs" />
     <Compile Include="Events\EventsHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Window\KspModalWindow.cs" />
     <Compile Include="Window\KspWindow.cs" />
     <Compile Include="Window\WindowStateAttribute.cs" />
   </ItemGroup>

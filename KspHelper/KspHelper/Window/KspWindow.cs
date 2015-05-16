@@ -67,14 +67,14 @@ namespace KspHelper.Window
 
         protected abstract void OnDraw();
 
-        void InternalDraw()
+        protected virtual void InternalDraw()
         {
             GUI.skin = HighLogic.Skin;
 
             WindowRect = WindowStyle == null ? GUILayout.Window(Id, WindowRect, InternalWindowDraw, Title) : GUILayout.Window(Id, WindowRect, InternalWindowDraw, Title, WindowStyle);
         }
 
-        private void InternalWindowDraw(int id)
+        protected virtual void InternalWindowDraw(int id)
         {
             OnDraw();
 
