@@ -5,11 +5,23 @@ namespace KspHelper.Events
 {
     public static class EventsHelper
     {
+        /// <summary>
+        /// Replace pre-defined KSPEvent to a new delegate
+        /// </summary>
+        /// <param name="module">current module</param>
+        /// <param name="name">event name ("Activate" for example)</param>
+        /// <param name="replaceAction">new action delegate</param>
         public static void ReplaceEvent(this PartModule module, string name, BaseEventDelegate replaceAction)
         {
             UpdateEvent(module, name, replaceAction);
         }
 
+        /// <summary>
+        /// Combine pre-defined KSPEvent with a new delegate
+        /// </summary>
+        /// <param name="module">current module</param>
+        /// <param name="name">event name ("Activate" for example)</param>
+        /// <param name="replaceAction">new action delegate</param>
         public static void CombineEvent(this PartModule module, string name, BaseEventDelegate replaceAction)
         {
             UpdateEvent(module, name, replaceAction, false);
@@ -43,7 +55,11 @@ namespace KspHelper.Events
             module.Events.Add(baseEvent); 
         }
 
-        
+        /// <summary>
+        /// Full copy of KSPEvent data to a new event
+        /// </summary>
+        /// <param name="source">event source</param>
+        /// <param name="dest">event destination</param>
         public static void CopyDataTo(this BaseEvent source, BaseEvent dest)
         {
             dest.active = source.active;

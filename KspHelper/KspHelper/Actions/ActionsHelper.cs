@@ -6,11 +6,23 @@ namespace KspHelper.Actions
 {
     public static class ActionsHelper
     {
+        /// <summary>
+        /// Replace any KSP predefined action to custom user action 
+        /// </summary>
+        /// <param name="module">current part module</param>
+        /// <param name="name">action name (Custom01 for example)</param>
+        /// <param name="action">link to a new action delegate</param>
         public static void ReplaceAction(this PartModule module, string name, BaseActionDelegate action)
         {
             UpdateCallback(module, name, action);
         }
 
+        /// <summary>
+        /// Combine any KSP action with a new delegate
+        /// </summary>
+        /// <param name="module">current part module</param>
+        /// <param name="name">action name (Custom01 for example)</param>
+        /// <param name="action">link to a new action delegate</param>
         public static void CombineAction(this PartModule module, string name, BaseActionDelegate action)
         {
             UpdateCallback(module, name, action, false);
