@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KspHelper", "KspHelper\KspH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KspHelper.Test", "KspHelper.Test\KspHelper.Test.csproj", "{DF1E1B12-ECA3-4AFE-9E52-25520061BD3E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D5EAC6CE-3A0C-4FF8-A2F2-33B0C6370DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
